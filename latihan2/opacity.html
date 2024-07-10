@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Try Opacity</title>
+	<style>
+		body{
+			background-image: url(img/pattern.png);
+		}
+		.satu{
+			width: 300px;
+			height: 300px;
+			background-color: darkgoldenrod;
+			opacity: .5;
+			position: relative;
+			margin: 50px auto;
+		}
+		.dua{
+			width: 100px;	
+			height: 100px;
+			background-color: darkgreen;
+			opacity: .5;
+			position: absolute;
+			bottom: -50px;
+			right: -50px;
+
+		}
+	</style>
+</head>
+<body>
+<!-- 
+	Sebelum adanya CSS3 untuk membuat transparan harus menggunakan photoshop terlebih dahulu, dengan cara kita harus crop kotak dengan opacity(transparan) yang kita inginkan, kemudian dimasukkan ke background image, jika opacitynya kurang/tidak sesuai keinginan user, maka kita harus mengulang lagi ke photoshop(kurenk worth it).CSS3 mempunyai properti untuk menangani masalah tersebut dengan menggunakan OPACITY.
+
+	Value dari Opacity yaitu: 0-1, 0 berarti tingkat transparannya sampai hilang, dan 1 berarti tingkat ketajaman/solid/tidak transparan
+
+	Di CSS jika valuenya 0.1, 0.2, ... bisa langsung ditulis .9(artinya 0.9)
+
+	Kenapa .dua ikut juga transparan?
+	karena .dua mewarisi transparan dari parentnya(.satu), dan kita juga bisa lebih transparankan dari opacity .satu, misalnya di div.satu opacitynya .5 otomatis di div.dua opacitynya .5 juga, jika kita mengatur opacity .dua menjadi .5 lagi maka yang terjadi .dua lebih transparan dari .satu karena yang sebenarnya terjadi yaitu value dari opacity .dua yaitu 0.25 karena transparan awalnya 0.5(yang didapatkan dari parent) terus dikurangi 0.5(50%) maka jadilah 0.25
+
+	Kita bisa membuat elemen parentnya solid/tidak transparan(SEPERTI LINK DIBAWAH), tetapi kita tidak bisa membuat elemen childnya solid/tidak transparan jika elemen parentnya memiliki opacity(transparan) SEPERTI LINK DIBAWAH, sebenarnya bisa tetapi di latihan berikutnya{RGBa & HSLa.html}
+ -->
+	<div class="satu">
+		<div class="dua"></div>
+	</div>
+
+<h1>Contoh elemen parentnya SOLID <a href="img/exmp.png" target="blank">Klik</a></h1>
+<h1>Contoh elemen childnya tidak bisa SOLID <a href="img/exmp1.png" target="blank">Klik</a></h1>
+</body>
+</html>

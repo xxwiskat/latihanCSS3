@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Try Transform(2d)</title>
+	<style>
+		body{
+			height: 2000px;
+		}
+		p{
+			text-align: center;
+			font-size: 20px;
+		}
+		.kotak{
+			width: 200px;
+			height: 200px;
+			background-color: rebeccapurple;
+			margin: 50px auto;
+			transition: 1s;
+		}
+		.kotak:hover{
+			transform: scale( 2, .5 );
+		}
+		.kotak2{
+			width: 200px;
+			height: 200px;
+			background-color: hotpink;
+			margin: 50px auto;
+			transition: 3s;
+		}
+		.kotak2:hover{
+			transform: rotate(180deg) rotateX(180deg) rotateY(180deg) scale(2, 2);
+		}
+		.kotak3{
+			width: 200px;
+			height: 200px;
+			background-color: darkolivegreen;
+			margin: 50px auto;
+			transition: 3s;
+		}
+		.kotak3:hover{
+			transform: skewY(-180deg);
+		}
+		.kotak4{
+			width: 200px;
+			height: 200px;
+			background-color: darkgray;
+			margin: 50px auto;
+			transition: 2s;
+		}
+		.kotak4:hover{
+			transform: translate(50px, 100px);
+		}
+
+	</style>
+</head>
+<body>
+<!-- 
+	Properti Transform digunakan untuk memanipulasi format visual dari elemen html(bisa ukuran, bentuk, posisi, dll).
+
+	Value Transform:
+		1. Scale= memperbesar/memperkecil
+		2. Rotate= memutar
+		3. Skew= membuat condong/miring
+		4. Translate= mengubah posisi
+	
+	Kode Sintax
+		1. scale(angka), scaleX(angka), scaleY(angka)
+		2. rotate(deg), rotateX(deg), rotateY(deg)
+		3. skew(deg), skewX(deg), skewY(deg)
+		4. translate(px), translateX(px), translateY(px)
+
+	Contoh:
+		transform: scale(2, .5);/ bisa juga ditulis transform: scaleX(2) scaleY(.5);
+		artinya elemen akan membesar secara horizontal(width) 2x lipat dari ukuran awalnya, dan mengecil setengah(0.5) dari elemen ukurannya.
+
+	Properti Transform bisa ditumpuk/multiple.(seperti .kotak2:hover)
+
+		HANYA skew dan skewX SAMA SAJA.
+
+		transform: translate(50px, 150px);
+		artinya elemen pindah dari tempat awal ke kanan sebanyak 50px, dan ke bawah 150px
+		Pada saat pindah elemen yang lain tidak ikut berpengaruh/berpindah(seperti position)
+
+		Perbedaan transform(translate) dengan position yaitu sama seperti filter, properti transform performancenya jauh lebih baik daripada position karena menggunakan hardware/ akselerasi hardware jadi yang bekerja GPU.
+ -->
+
+ 	<div class="kotak"></div>
+ 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 	<div class="kotak2"></div>
+ 	<div class="kotak3"></div>
+ 	<div class="kotak4"></div>
+</body>
+</html>

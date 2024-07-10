@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Try Linear Gradient</title>
+	<style>
+		.satu{
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background-image: linear-gradient(red, blue, green, yellow);
+		}
+		.dua{
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background: linear-gradient(0deg, red, green);
+		}
+		.tiga{
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background: linear-gradient(to top left, green, orange);
+		}
+		.empat{
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+			background: linear-gradient(to right, red 20%, blue 70%);
+		}
+	</style>
+</head>
+<body>
+<!-- 
+	GRADIENT terbagi menjadi 2 yaitu:
+										1. Linear Gradient
+										2. Radial Gradient
+
+	Linier gradient= memberikan warna gradasi secara garis lurus
+
+	Linear-gradient dan radial-gradient bukan merupakan properti melainkan value dari background-image
+
+	Value dari linear-gradient yaitu:
+		1. background-image: linear-gradient(warna awal(name color, hexadecimal, dan rgb), warna akhir); bisa juga multiple color tinggal menambahkan (,).
+		   atau bisa juga menuliskan background saja, contoh: background: linear-gradient(red,green);
+		   UNTUK SINTAKS SEDERHANA(div.satu)
+
+		2. CONTOH SINTAKS LENGKAP: background: linear-gradient(sudut / arah, warna awal, sampai warna akhir);
+			Value sudut yaitu: 45deg/-45deg mengarah dari sudut ke sudut
+							   90deg/-90deg mengarah dari sisi samping ke sisi samping, dst(180deg, 270deg, 0)
+							 Fungsi (-) yaitu memutar arah/kebalikan warna seperti contoh, 90deg berarti dari kiri ke kanan dan sebaliknya.
+							 deg artinya degrees/derajat
+			Value arah bisa diliat di folder img.
+
+	Color Stop(div.empat) yaitu untuk mengubah bobot warna, secara default bobot warna gradasi itu seimbang, dengan adanya color stop kita bisa mengubah bobot warna (%)/px, % disini artinya bobot warna dari 1%-100%(Seperti di Photoshop).
+	Konsep color stop= contoh background: linear-gradient(red 20%, blue 70%);
+					   artinya warna merah solid 20% dari ukuran kotaknya, dan warna blue solid 70% dari ukuran kotaknya, warna akan bergradasi setelah 20% dan 70% warna solid.
+
+	SECARA DEFAULT ARAH GRADIENT DARI TOP TO BOTTOM
+
+ -->
+
+ <div class="satu"></div>
+ <div class="dua"></div>
+ <div class="tiga"></div>
+ <div class="empat"></div>
+
+</body>
+</html>

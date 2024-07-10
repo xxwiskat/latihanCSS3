@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Try Font Face</title>
+	<style>
+		@font-face{
+			font-family: bebas nue;
+			src: url(font/bebasneue-regular-webfont.woff) format("woff");
+		}
+		@font-face{
+			font-family: bkrose;
+			src: url(font/BLACKR-webfont.woff) format("woff");
+		}
+		@font-face{
+		    font-family: edo;
+		    src: url(font/edo-webfont.woff) format("woff"),
+		}
+
+		.satu{
+			font-size: 100px;
+			font-family:  bkrose;
+			text-align: center;
+		}
+		.dua{
+			font-size: 100px;
+			font-family:  bebas nue;
+			text-align: center;
+		}
+		.tiga{
+			font-size: 100px;
+			font-family:  edo;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+<!-- 
+	font-face digunakan untuk mengelola font css kita.Jika ada font yang ingin kita download di google bisa digunakan di web juga(tergantung fontnya bisa mencakup di web apa tidak)
+
+	Kenapa woff/woff2(Web Open File Format) lebih baik daripada format font yang lain?
+		1.Karena format woff/woff2 dikhususkan untuk font di web
+		2.Dikembangkan oleh Mozilla
+		3.Di-load lebih cepat daripada jenis font yang lain.
+	Jika format font yang kita download ttf, bisa diubah di web FONTSQUIRREL.COM
+ -->
+
+ 	<h1 class="satu">Hello World!</h1>
+ 	<h1 class="dua">Hello World!</h1>
+ 	<h1 class="tiga">Hello World!</h1>
+
+</body>
+</html>

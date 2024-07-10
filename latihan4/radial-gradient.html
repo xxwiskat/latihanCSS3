@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Try Radial-Gradient</title>
+	<style>
+		div{
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+		}
+		.satu{
+			background: radial-gradient(red 15%, green 20%, blue 70%);
+		}
+		.dua{
+			background: radial-gradient(circle farthest-corner at top right, blue, red);
+		}
+	</style>
+</head>
+<body>
+<!-- 
+	Radial-Gradient= gradasi warna melingkar/elipse, dimana warna pertama akan menjadi pusat lingkarannya.
+	Sama seperti linear-gradient, radial-gradient dapat diberi multiple color, dan color stop.
+
+	Konsep color stop= contoh background: radial-gradient(red 20%, blue 70%);
+					   artinya warna merah solid 20% dari ukuran kotaknya, dan warna blue solid 70% dari ukuran kotaknya, warna akan bergradasi setelah 20% dan 70% warna solid.
+
+					   CATATAN!!
+					   BISA MENGGUNAKAN % ATAU PX (COLOR STOP)
+
+	CONTOH SINTAX SEDERHANA DAN WAJIB(div.satu)
+	CONTOH SINTAX LENGKAP:
+					background: radial-gradient(<type> <jangkauan> |at <posisi-y> <posisi-x>|, <warna awal>, <warna akhir>);
+						type= bisa ellipse(default)/ circle(lingkaran)
+						jangkauan= jangkauan/cakupan gradasi warna.Jangkauan gradasi warna kita bisa atur sesuai valuenya.Value dari jangkauan:
+								1. closest-corner= jarak dari pusat gradien ke sudut terdekat elemen.
+								2. farthest-corner= jarak dari pusat gradient ke sudut terjauh elemen.
+								3. closest-side= jarak dari pusat gradient ke sisi terdekat elemen.
+								4. farthest.side= jarak dari pusat gradient ke sisi terjauh elemen.
+						BUKA FOLDER IMG= ILUSTRASI/KONSEP JANGKAUAN.
+						posisi= untuk memindahkan posisi pusat gradientnya.Valuenya yaitu:
+								1. posisi-y (vertikal)= top, center, bottom, dan px.
+								2. posisi-x (horizontal)= left, center, right, dan px.
+	CATATAN!!
+		yang wajib itu HANYA WARNA AWAL sampai WARNA AKHIR sisanya OPTIONAL.
+ -->
+	<div class="satu"></div>
+	<div class="dua"></div>
+
+</body>
+</html>
